@@ -1,0 +1,26 @@
+.text-stroke {
+    color: transparent; 
+    -webkit-text-stroke-width: 2px; 
+    -webkit-text-stroke-color: white;
+}
+.text-20xl{
+    font-size: 300pt;
+    object-position: 0% -10%;
+}
+  @media screen and (min-width: 400px) and (max-width: 1024px){
+    .text-20xl{
+        font-size: 200pt;
+      }
+}
+.w-35{
+    width: 35%;
+}
+.object-top{
+    object-position: 0% -10%;
+}
+.jersey{
+    position: absolute;
+    right: 15%;
+    top: 3%;
+}
+  
