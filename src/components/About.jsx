@@ -1,3 +1,5 @@
+import { FaFacebookF, FaXTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
 const About = ({props}) => {
 const cont = ([
     {
@@ -25,33 +27,28 @@ const cont = ([
     <div className='w-full h-screen bg-blue-600'>
 
         <div className="md:hidden">
-        <div className='p-5'>
-            <h1 className='text-5xl text-white font-black uppercase'>{props.name.split(' ')[0]}</h1>
-            <h1 className='text-6xl text-black font-black uppercase'>{props.name.split(' ')[1]}</h1>
+         <div className='pt-10 pl-5'>
+            <h1 className='text-4xl text-white font-black uppercase'>{props.name.split(' ')[0]}</h1>
+            <h1 className='text-5xl text-black font-black uppercase'>{props.name.split(' ')[1]}</h1>
           </div>
-          <div className='absolute'>
-            <span className=' text-9xl text-stroke font-bold pt-20'>{props.jersey}</span>
+          <div className='jersey p-5'>
+            <span className='text-9xl text-stroke font-bold'>{props.jersey}</span>
           </div>
-        <div className='h-80 w-full relative overflow-hidden'>
-            <img className='h-full w-full filter drop-shadow-2xl shadow-black object-cover object-top img scale-150' src={props.url} alt=''/>
-        </div>
-        <div>
-            <div className='grid grid-cols-2 gap-7 mt-16  ml-10'>
-                    
-            {cont.slice(0, 3).map(({ id, name, val }) => (
+          <div>
+            <div className='grid grid-cols-1 gap-5 p-5'> 
+            {cont.map(({ id, name, val }) => (
                 <div key={id}>
-                    <h1 className='text-black text-2xl capitalize font-bold'>{name}</h1>
+                    <h1 className='text-white text-2xl capitalize font-bold'>{name}</h1>
                     <h2 className='text-yellow-400 text-3xl font-bold'>{val}</h2>
                 </div>
                 ))}
-                {cont.length === 4 && (
-                <div>
-                    <h1 className='text-black text-2xl capitalize font-bold'>{cont[3].name}</h1>
-                    <h2 className='text-yellow-400 text-7xl font-bold'>{cont[3].val}</h2>
-                </div>
-                )}
             </div>
-        </div>
+            <div className='flex p-5 gap-5 text-3xl text-white'>
+                <a href={props.fb}><FaFacebookF /></a>
+                <a href={props.x}><FaXTwitter /></a>
+                <a href={props.ig}><FaInstagram /></a>
+            </div>
+          </div>
         </div>
 
         <div className="hidden md:block">

@@ -1,20 +1,26 @@
 import React from 'react'
+import { FaFacebookF, FaXTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
 const Home = ({props}) => {
   return (
     <div className='w-full h-screen md:w-full md:h-screen bg-red-600'>
       <div className='md:hidden'>
-          <div className='p-5'>
-            <h1 className='text-5xl text-white font-black uppercase'>{props.name.split(' ')[0]}</h1>
-            <h1 className='text-6xl text-black font-black uppercase'>{props.name.split(' ')[1]}</h1>
+        <div className='grid grid-cols-2 pt-10 pl-5'>
+          <div>
+            <h1 className='text-4xl text-white font-black uppercase'>{props.name.split(' ')[0]}</h1>
+            <h1 className='text-5xl text-black font-black uppercase'>{props.name.split(' ')[1]}</h1>
           </div>
-          <div className='jersey'>
-            <span className='text-20xl text-stroke font-bold pt-20'>{props.jersey}</span>
+          <div className='jersey absolute right-5'>
+            <span className='text-8xl text-stroke font-bold'>{props.jersey}</span>
           </div>
-        <div className='h-80 w-fullrelative overflow-hidden'>
-            <img className='h-full w-full filter drop-shadow-2xl shadow-black object-cover object-top img scale-150' src={props.url} alt=''/>
         </div>
-        <div className='w-full p-5 pt-5'>
-          <p className='font-semibold text-white'>{props.description}</p>
+        <div className='w-full'>
+            <img className='' src={props.url} alt=''/>
+        </div>
+        <div className='w-full flex items-center justify-center gap-5 text-3xl text-white'>
+          <a href={props.fb}><FaFacebookF /></a>
+          <a href={props.x}><FaXTwitter /></a>
+          <a href={props.ig}><FaInstagram /></a>
         </div>
       </div>
 
