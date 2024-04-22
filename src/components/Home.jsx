@@ -7,8 +7,8 @@ const Home = ({props}) => {
       <div className='md:hidden'>
         <div className='grid grid-cols-2 pt-10 pl-5'>
           <div>
-            <h1 className='text-4xl text-white font-black uppercase'>{props.name.split(' ')[0]}</h1>
-            <h1 className='text-5xl text-black font-black uppercase'>{props.name.split(' ')[1]}</h1>
+            <h1 className='text-3xl text-white font-black uppercase'>{props.name.split(' ')[0]}</h1>
+            <h1 className='text-4xl text-black font-black uppercase'>{props.name.split(' ')[1]}</h1>
           </div>
           <div className='jersey absolute right-5'>
             <span className='text-8xl text-stroke font-bold'>{props.jersey}</span>

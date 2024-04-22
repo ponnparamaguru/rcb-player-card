@@ -38,12 +38,12 @@ const cont = ([
             <div className='grid grid-cols-1 gap-5 p-5'> 
             {cont.map(({ id, name, val }) => (
                 <div key={id}>
-                    <h1 className='text-white text-2xl capitalize font-bold'>{name}</h1>
-                    <h2 className='text-yellow-400 text-3xl font-bold'>{val}</h2>
+                    <h1 className='text-white text-xl capitalize font-bold'>{name}</h1>
+                    <h2 className='text-yellow-400 text-2xl font-bold'>{val}</h2>
                 </div>
                 ))}
             </div>
-            <div className='flex p-5 gap-5 text-3xl text-white'>
+            <div className='flex pt-5 pl-5 gap-5 text-3xl text-white'>
                 <a href={props.fb}><FaFacebookF /></a>
                 <a href={props.x}><FaXTwitter /></a>
                 <a href={props.ig}><FaInstagram /></a>
